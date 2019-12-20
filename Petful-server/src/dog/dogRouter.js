@@ -14,8 +14,8 @@ dogStore.forEach(element => newDogLine.enqueue(element));
 
 DogRouter 
  .route('/')
- .get((req, res, next ) => {
-    adoptableDog = DogLine.first.value 
+ .get((req, res) => {
+    adoptableDog = newDogLine.first.data
         res.status(200).json(adoptableDog)
  })
 

@@ -1,8 +1,9 @@
 // require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const dogRouter = require('./src/dog/dogRouter')
+const DogRouter = require('./src/dog/dogRouter')
 const CatRouter = require('./src/cat/catRouter')
+const UserRouter =  require('./src/user/userRouter')
 
 
 
@@ -14,6 +15,7 @@ app.use(express.json())
 
 app.use('/api/cat', CatRouter)
 app.use('/api/dog', DogRouter)
+app.use('/api/users', UserRouter)
 
 
 

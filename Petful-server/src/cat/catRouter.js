@@ -14,9 +14,9 @@ catStore.forEach(element => newCatLine.enqueue(element));
 
 CatRouter 
  .route('/')
- .get((req, res, next ) => {
-    adoptableCat = newCatLine.first.value 
-        res.status(200).json(adoptableCat)
+ .get((req, res ) => {
+    adoptableCat = newCatLine.first.data
+        return res.status(200).json(adoptableCat)
  })
 
  // add delete !
